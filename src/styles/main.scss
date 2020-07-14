@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mabry Pro;
+  font-style: normal;
+  font-weight: normal;
+  background: #ffffff;
+}
+
+.main {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000
+}
+
+button {
+  width: 355px;
+  min-height: 57px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 0;
+  border: none;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 140px;
+  padding-right: 140px;
+}
