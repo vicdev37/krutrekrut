@@ -714,7 +714,6 @@ section.main-section {
 }
 
 .replace_wrapper {
-  position: relative;
   text-align: center;
 }
 .replace_wrapper p {
@@ -753,8 +752,8 @@ section.main-section {
 .hidden-agreement {
   opacity: 0;
   position: absolute;
-  right: -22px;
-  top: 114px;
+  left: 103px;
+  top: 17px;
   width: 456px;
   font-size: 14px;
   line-height: 140%;
@@ -764,16 +763,26 @@ section.main-section {
   padding: 20px 20px 27px 20px;
   text-align: left;
   transition: 0.3s;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
-.agreement-link:hover {
-  text-decoration: underline;
+.replace-text {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.agreement-link {
+  position: relative;
+  border-bottom: 2px solid #000000;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 100;
+  margin-left: 6px;
 }
 .agreement-link:hover .hidden-agreement {
   opacity: 1;
-  z-index: 10;
 }
 
 .humans {
