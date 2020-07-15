@@ -2,19 +2,260 @@ extends layout/layout.pug
 
 
 block content
-  .hi
-    | ffsdfsdfsd
+  .main
+    header
+      .header_logo__wrapper
+        .header_logo
+          a(href='#')
+            img.logo(src="../src/images/logo.svg" alt="Logo") 
+            .header_logo-name
+              span.name_title
+                |  КРУТРЕКРУТ
+              span.name_description
+                | FULLSTACK IT RECRUITMENT AGENCY
+      .header_contacts
+        span 
+          |  свяжитесь с нами  
+        .header_socials
+          a(href='#')
+            img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
+          a(href='#')
+            img.logo(src="../src/images/whatsapp.svg" alt="Вотсап")
 
+    section.main-section
+      .main-section_info
+        .main-section_title
+          | Найдем IT и digital-специалистов <span>мечты</span> за 5 недель с гарантией результата
+        .btn_wrapper
+          button.btn-red  
+            | бесплатно получить первого кандидата 
+          span
+            |  в течение 24-х часов   
+        .btn_wrapper
+          button.btn-black  
+            | узнать точную стоимость и сроки
+          span
+            |  на вашу позицию
+      .main-section_img
+        img.logo(src="../src/images/ladder.svg" alt="лестница") 
+
+  section.find-vacancy
+    .container
+      .find-vacancy_title
+        | Работаем с вакансиями любой сложности    
+      .find-vacancy_subtitle
+        | Кого мы можем найти?
+      .accordeon
+        ul
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Software Engineering
+            p
+              span
+                a Embedded Engineer
+                a Frontend Engineer
+                a Hardware Engineer
+                a Backend Engineer
+                a Data Engineer
+              span
+                a Full Stack Engineer
+                a Machine Learning Engineer
+                a Mobile Engineer
+                a Security Engineer
+                a AR/VR Engineer
+              span 
+                a Blockchain Engineer
+                a Computer Vision Engineer
+                a Gaming Engineer
+                a NLP Engineer
+                a Search Engineer
   
-
-
-
-
-
-
-
-
-
-
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Engineering Management
+            p
+              | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas recusandae deleniti odit asperiores voluptate debitis suscipit ipsam saepe at voluptates, aspernatur ullam illum unde optio. Aperiam temporibus doloremque molestias?
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Developer Operations (DevOps)
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit unde doloribus fugiat ipsum repellendus. Dolorem eaque ipsam animi necessitatibus! Quas impedit totam eos quia eum hic ratione dolorum modi quasi!
+    
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Design
+            p
+              | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas recusandae deleniti odit asperiores voluptate debitis suscipit ipsam saepe at voluptates, aspernatur ullam illum unde optio. Aperiam temporibus doloremque molestias?
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Product Management
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit unde doloribus fugiat ipsum repellendus. Dolorem eaque ipsam animi necessitatibus! Quas impedit totam eos quia eum hic ratione dolorum modi quasi!
+    
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Project Management
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit unde doloribus fugiat ipsum repellendus. Dolorem eaque ipsam animi necessitatibus! Quas impedit totam eos quia eum hic ratione dolorum modi quasi!
+    
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Data Analytics
+            p
+              | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas recusandae deleniti odit asperiores voluptate debitis suscipit ipsam saepe at voluptates, aspernatur ullam illum unde optio. Aperiam temporibus doloremque molestias?
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Quality Assurance (QA)
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit unde doloribus fugiat ipsum repellendus. Dolorem eaque ipsam animi necessitatibus! Quas impedit totam eos quia eum hic ratione dolorum modi quasi!
+    
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 Information Technology (IT)
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit unde doloribus fugiat ipsum repellendus. Dolorem eaque ipsam animi necessitatibus! Quas impedit totam eos quia eum hic ratione dolorum modi quasi!
+          li
+            input(type='checkbox', checked='')
+            i
+            h2 C-Level
+            p
+              | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quas recusandae deleniti odit asperiores voluptate debitis suscipit ipsam saepe at voluptates, aspernatur ullam illum unde optio. Aperiam temporibus doloremque molestias?
   
+  
+  section.whatWeDoing
+    .container
+      .whatWeDoing_wrapper
+        .whatWeDoing_title
+          | ЧЕМ МЫ ЗАНИМАЕМСЯ?
+        .whatWeDoing_description
+          | Мы берем на себя процесс поиска кандидатов, тестируем и проверяем их компетенцию, назначаем и контролируем проведение всех этапов интервью и, в конечном итоге, согласовываем условия выхода специалиста к вам в проект.
+
+  section.replace
+    .replace_wrapper
+      .replace_title
+        | бесплатно найдем замену
+      
+      
+      p
+        | В течение 3-х месяцев, если сотрудник вам не подойдет или сам уволится.  
+      .replace-text
+        p 
+          |  Условия прописываем в 
+        .agreement-link договоре.
+          .hidden-agreement
+            | 4. Гарантии <br>
+            | 4.1. В случае прекращения трудовых отношений между Заказчиком и кандидатом, представленным Исполнителем и принятым Заказчиком на работу, по какой-либо причине (кроме ликвидации компании, сокращения численности или штата работников компании, отказа работника от продолжения работы в связи с изменением определенных сторонами условий трудового договора, отказа работника от перевода на работу в другую местность вместе с работодателем, восстановления на работе работника ранее выполнявшего эту работу по решению суда или инспекции труда), Исполнитель гарантирует произвести однократную замену представленного кандидата, если приступивший к работе кандидат прекратил работу у Заказчика: <br>
+            | 4.1.1. в течение 6 календарных месяцев после выхода кандидата на работу, если указанный кандидат был принят на Позицию уровня руководителя, которая включает в себя, но не ограничивается, следующими вакансиями: директор департамента, начальник управления, начальник отдела, руководитель направления и т.д.; <br>
+            | 4.1.2. в течение 3 календарных месяцев после выхода кандидата на работу, если указанный кандидат был принят на Позицию начального/среднего уровня, которая включает в себя, но не ограничивается, следующими вакансиями: специалист, старший специалист, ведущий специалист, главный специалист и т.д. <br>
+            | 4.2. Исполнитель обеспечивает однократную замену этого работника без взимания дополнительной оплаты и представляет Заказчику не более 5 кандидатов на позицию, при этом фактом выполнения гарантийной замены будет считаться выход нового кандидата на работу в компанию Заказчика и подписание с ним трудового договора.<br>
+      .replace-btns
+        .btn_wrapper
+          button.btn-red  
+            | бесплатно получить первого кандидата 
+          span
+            |  в течение 24-х часов   
+        .btn_wrapper
+          button.btn-black  
+            | узнать точную стоимость и сроки
+          span
+            |  на вашу позицию  
+
+  section.humans
+    .humans_wrapper
+      .human
+        img(src="../src/images/man.svg" alt="мужчина")
+      .human-text
+        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком.
+        p Мы постоянно учимся и работаем над улучшением методологии найма в IT.
+        p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов
+      .human
+        img(src="../src/images/woman.svg" alt="женщина")    
+
+  section.feedback
+    .container
+      .feedback_title
+        | прочтите отзывы
+      .feedback-items_wrapper
+        .feedback-item
+          .item_logo
+            img(src="../src/images/yandex.svg" alt="яндекс")
+          .item_name
+            | Анастасия кириллова 
+          .item_link
+            a(href="#") linkedin
+          .item_text
+            | Так приятно, когда твой запрос понимают с полуслова и очень быстро приводят нужных специалистов, да еще и такого высокого уровня. С нашими требованиями это просто фантастика! Спасибо Вике и ее команде  
+  
+        .feedback-item
+          .item_logo
+            img(src="../src/images/sd.svg" alt="яндекс")
+          .item_name
+            | Анастасия крестьянникова
+          .item_link
+            a(href="#") facebook
+          .item_text
+            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов. С нашими требованиями это просто фантастика!
+        
+        .feedback-item
+          .item_logo
+            img(src="../src/images/42.svg" alt="яндекс")
+          .item_name
+            | Борис адимов
+          .item_link
+            a(href="#") linkedin
+          .item_text
+            | Уже 2 года плодотворно сотрудничаем с командой krutrecruit, которая помогает находить даже редких специалистов в короткие сроки, что позволяет гибко масштабироваться нашему агенству под потребности клиентов.
+
+        .feedback-item
+          .item_logo
+            img(src="../src/images/alfa.svg" alt="яндекс")
+          .item_name
+            | елена демченко
+          .item_link
+            a(href="#") linkedin
+          .item_text
+            | Крутрекрут гибкие ребята, которые умеют хорошо считывать потребность заказчика, и  предоставляют выборку из релевантных резюме. Это помогает быстро и эффективно нанимать лучших разработчиков.
+
+  footer
+    .footer_title
+      | свяжитесь с нами
+    .footer-contacts_wrapper
+      .footer_mail
+        a(href="mailto:vlad@webref.ru") krutrecruit@krutrecruit.com 
+      .footer_socials
+        a(href='#')
+          img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
+        a(href='#')
+          img.logo(src="../src/images/whatsapp.svg" alt="Вотсап")
+
+        
+
+
+            
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
 

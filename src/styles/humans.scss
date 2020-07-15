@@ -1,0 +1,22 @@
+.humans {
+  margin-top: 240px;
+  background: url("../images/line.png") bottom no-repeat;
+  background-size: contain;
+}
+
+.humans_wrapper {
+  display: flex;
+}
+
+.human-text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+
+  p:not(:first-child) {
+    margin-top: 80px;
+  }
+}

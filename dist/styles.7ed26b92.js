@@ -184,7 +184,18 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/normalize.css/normalize.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/styles/styles.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"normalize.css":"../node_modules/normalize.css/normalize.css","./../fonts/MabryPro-Bold.eot":[["MabryPro-Bold.ec90f326.eot","../src/fonts/MabryPro-Bold.eot"],"../src/fonts/MabryPro-Bold.eot"],"./../fonts/MabryPro-Bold.woff2":[["MabryPro-Bold.c866a1a3.woff2","../src/fonts/MabryPro-Bold.woff2"],"../src/fonts/MabryPro-Bold.woff2"],"./../fonts/MabryPro-Bold.woff":[["MabryPro-Bold.c9ba3986.woff","../src/fonts/MabryPro-Bold.woff"],"../src/fonts/MabryPro-Bold.woff"],"./../fonts/MabryPro-Bold.ttf":[["MabryPro-Bold.f991cf2c.ttf","../src/fonts/MabryPro-Bold.ttf"],"../src/fonts/MabryPro-Bold.ttf"],"./../fonts/MabryPro-Regular.eot":[["MabryPro-Regular.f9d5b654.eot","../src/fonts/MabryPro-Regular.eot"],"../src/fonts/MabryPro-Regular.eot"],"./../fonts/MabryPro-Regular.woff2":[["MabryPro-Regular.91b6d116.woff2","../src/fonts/MabryPro-Regular.woff2"],"../src/fonts/MabryPro-Regular.woff2"],"./../fonts/MabryPro-Regular.woff":[["MabryPro-Regular.7b21ca2a.woff","../src/fonts/MabryPro-Regular.woff"],"../src/fonts/MabryPro-Regular.woff"],"./../fonts/MabryPro-Regular.ttf":[["MabryPro-Regular.3203c738.ttf","../src/fonts/MabryPro-Regular.ttf"],"../src/fonts/MabryPro-Regular.ttf"],"./../fonts/MabryPro-Light.eot":[["MabryPro-Light.414383f8.eot","../src/fonts/MabryPro-Light.eot"],"../src/fonts/MabryPro-Light.eot"],"./../fonts/MabryPro-Light.woff2":[["MabryPro-Light.5e822c60.woff2","../src/fonts/MabryPro-Light.woff2"],"../src/fonts/MabryPro-Light.woff2"],"./../fonts/MabryPro-Light.woff":[["MabryPro-Light.da84b798.woff","../src/fonts/MabryPro-Light.woff"],"../src/fonts/MabryPro-Light.woff"],"./../fonts/MabryPro-Light.ttf":[["MabryPro-Light.9ac34811.ttf","../src/fonts/MabryPro-Light.ttf"],"../src/fonts/MabryPro-Light.ttf"],"./../fonts/MabryPro-Medium.eot":[["MabryPro-Medium.fee32928.eot","../src/fonts/MabryPro-Medium.eot"],"../src/fonts/MabryPro-Medium.eot"],"./../fonts/MabryPro-Medium.woff2":[["MabryPro-Medium.489a0c0c.woff2","../src/fonts/MabryPro-Medium.woff2"],"../src/fonts/MabryPro-Medium.woff2"],"./../fonts/MabryPro-Medium.woff":[["MabryPro-Medium.c538478d.woff","../src/fonts/MabryPro-Medium.woff"],"../src/fonts/MabryPro-Medium.woff"],"./../fonts/MabryPro-Medium.ttf":[["MabryPro-Medium.909da348.ttf","../src/fonts/MabryPro-Medium.ttf"],"../src/fonts/MabryPro-Medium.ttf"],"./../images/line.png":[["line.fc530221.png","../src/images/line.png"],"../src/images/line.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -212,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56987" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55390" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
