@@ -47,3 +47,36 @@ footer {
 
 
 }
+
+
+@media (max-width: 992px) {
+  footer {
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+  }
+
+  .footer_mail {
+    display: none;
+  }
+
+  .footer_title {
+    font-size: 14px;
+  }
+
+  .footer-contacts_wrapper {
+    margin-left: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  footer {
+    margin-top: 60px;
+  }
+
+  .footer_socials a {
+    width: 42px;
+    margin-right: 15px;
+  }
+}
