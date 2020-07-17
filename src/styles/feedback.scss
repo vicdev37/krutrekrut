@@ -65,3 +65,34 @@
   color: rgba(0, 0, 0, 0.6);
   margin-top: 12px;
 }
+
+
+
+@media (max-width: 992px) {
+  .feedback {
+    margin-top: 40px;
+  }
+
+  .feedback-items_wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .feedback-item:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .feedback-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback_title {
+    font-size: 24px;
+  }
+
+  .item_name {
+    font-size: 17px;
+  }
+}

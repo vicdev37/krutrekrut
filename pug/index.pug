@@ -7,7 +7,7 @@ block content
       .header_logo__wrapper
         .header_logo
           a(href='#')
-            img.logo(src="../src/images/logo.svg" alt="Logo") 
+            img(src="../src/images/logo.svg" alt="Logo") 
             .header_logo-name
               span.name_title
                 |  КРУТРЕКРУТ
@@ -26,6 +26,8 @@ block content
       .main-section_info
         .main-section_title
           | Найдем IT и digital-специалистов <span>мечты</span> за 5 недель с гарантией результата
+        .main-section_img.hidden
+          img(src="../src/images/ladder.svg" alt="лестница")   
         .btn_wrapper
           button.btn-red  
             | бесплатно получить первого кандидата 
@@ -170,13 +172,18 @@ block content
             |  на вашу позицию  
 
   section.humans
-    .humans_wrapper
+    .human-text.hidden
+        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком.
+        p Мы постоянно учимся и работаем над улучшением методологии найма в IT.
+        p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов 
+    .humans_wrapper 
       .human
         img(src="../src/images/man.svg" alt="мужчина")
       .human-text
         p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком.
         p Мы постоянно учимся и работаем над улучшением методологии найма в IT.
         p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов
+      
       .human
         img(src="../src/images/woman.svg" alt="женщина")    
 

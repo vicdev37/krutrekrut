@@ -182,3 +182,72 @@
   }
 
 }
+
+@media (max-width: 618px) {
+  .find-vacancy {
+    margin-top: 44px;
+  }
+
+  .accordeon {
+    h2 {
+      font-size: 24px;
+      padding-left: 0;
+    }
+
+    p {
+      padding-left: 0;
+    }
+
+
+  }
+
+  .accordeon ul li i {
+    transform: translate(0px, 0)
+  }
+
+  .accordeon ul li i:before,
+  .accordeon ul li i:after {
+    height: 10px;
+  }
+
+  .accordeon ul li input[type=checkbox]:checked~i:before {
+    transform: translate(-5px, 0) rotate(45deg);
+  }
+
+  .accordeon ul li i:after {
+    transform: translate(-4px, 0) rotate(-45deg);
+  }
+
+
+}
+
+
+
+@media (max-width: 480px) {
+
+
+  .find-vacancy_title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .find-vacancy_subtitle {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .accordeon {
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      display: block;
+      font-size: 16px;
+    }
+  }
+
+  .accordeon p span:not(:first-child) {
+    margin-left: 0;
+  }
+}
