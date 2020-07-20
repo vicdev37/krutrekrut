@@ -164,7 +164,9 @@ section.main-section {
   }
 
   .btn_wrapper {
-    width: 100%;
+    width: 68%;
+    margin: auto;
+
 
     button {
       width: 100%;
@@ -175,8 +177,17 @@ section.main-section {
     }
 
     &:last-child {
-      margin-left: 0;
+      margin: 30px auto;
+
     }
+  }
+
+  .btn_wrapper:last-child {
+    margin-left: auto !important;
+  }
+
+  .btn-black {
+    margin-top: 10px;
   }
 }
 
@@ -214,12 +225,14 @@ section.main-section {
   }
 
   .btn_wrapper {
+    width: 100%;
+
     button {
       font-size: 15px;
     }
 
-    .btn-black {
-      margin-top: 28px;
-    }
+
   }
+
+
 }
