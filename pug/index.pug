@@ -46,7 +46,7 @@ block content
           .modal-content
             .form-wrapper
               .close
-              form(action='')
+              form(action='POST' name='candidate' data-netlify='true')
                 .form-title
                   | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
                 .form-body
@@ -54,30 +54,30 @@ block content
                     label.importantly(for='item-name') 
                       | Имя
                       .star *
-                    input.input-name(type='text' placeholder='Введите ваше имя')  
+                    input.input-name(type='text' name='name' placeholder='Введите ваше имя')  
                   .form-item
                     label.importantly(for='item-contact') 
                       | Контакт
                       .star *  
-                    input.input-contact(type='text' placeholder='Введите контактные данные')  
+                    input.input-contact(type='text' name='contact' placeholder='Введите контактные данные')  
                   .form-item
                     label.importantly(for='item-company') 
                       | Компания
                       .star *
-                    input.input-company(type='text' placeholder='Название компании')  
+                    input.input-company(type='text' name='company' placeholder='Название компании')  
                   .form-item
                     label.importantly(for='item-position') 
                       | Должность
                       .star *
-                    input.input-position(type='text')  
+                    input.input-position(type='text' name='position')  
                   .form-item
                     label(for='item-vacancy') 
                       | Ссылка на вакансию
-                    input.input-vacancy(type='text')  
+                    input.input-vacancy(type='text' name='vacancy')  
                   .form-item
                     label(for='item-name') 
                       | Ссылка на сайт
-                    input.input-name(type='text' placeholder='Введите ваше имя') 
+                    input.input-name(type='text' name='site' placeholder='Введите ваше имя') 
                 .form-btn
                   button(type="submit") отправить          
 
