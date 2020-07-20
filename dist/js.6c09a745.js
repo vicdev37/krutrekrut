@@ -19194,6 +19194,8 @@ var _aos = _interopRequireDefault(require("aos"));
 
 require("babel-polyfill");
 
+var _jquery = require("jquery");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var jquery = require("jquery");
@@ -19203,7 +19205,18 @@ var bodyScrollLock = require('body-scroll-lock');
 var disableBodyScroll = bodyScrollLock.disableBodyScroll;
 var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 window.$ = window.jQuery = jquery;
-$(document).ready(function () {});
+$(document).ready(function () {
+  $(".btn-red").each(function () {
+    $(this).on('click', function () {
+      $('.modal').addClass("open");
+      $('.form-wrapper').addClass("open");
+    });
+  });
+  $('.close').on('click', function () {
+    $('.form-wrapper').removeClass("open");
+    $('.modal').removeClass("open");
+  });
+});
 },{"jquery":"../node_modules/jquery/dist/jquery.js","body-scroll-lock":"../node_modules/body-scroll-lock/lib/bodyScrollLock.min.js","aos":"../node_modules/aos/dist/aos.js","babel-polyfill":"../node_modules/babel-polyfill/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -19232,7 +19245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49484" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49222" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

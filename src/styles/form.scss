@@ -1,6 +1,48 @@
+.open {
+  display: block !important;
+}
+
+.modal {
+  display: none;
+  position: relative;
+  z-index: 1050;
+  background-color: rgba(100, 100, 100, 0.8);
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 586px;
+  margin: 10.1rem auto;
+  width: auto;
+  top: 0%;
+  left: 0%;
+  transform: translate(0, 0);
+}
+
+.modal-content {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
 .form-wrapper {
+  display: none;
   width: 440px;
   position: absolute;
+  right: 80px;
+  top: 30%;
   background: #ffffff;
   border: 1px solid #000000;
   z-index: 1;
@@ -55,11 +97,112 @@ form {
 .form-body {
   display: flex;
   flex-flow: row wrap;
-  padding-left: 32px;
-  padding-right: 32px;
+  // padding-left: 32px;
+  // padding-right: 32px;
+  margin-top: 10px;
 }
 
 .form-item {
+  width: 172px;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #000000;
+  margin-left: 32px;
+  margin-top: 22px;
+
+  input {
+    border: none;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #000000;
+    outline: none;
+    padding-bottom: 10px;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 12px;
+      color: #F0F0F0;
+    }
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 10px;
+    color: #000000;
+  }
+
+}
+
+.importantly {
+  display: flex;
+
+  .star {
+    margin-left: 2px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #FF0000;
+  }
+}
+
+.form-btn {
+  width: 170px;
+  margin: 27px auto;
+
+  button {
+    width: 100%;
+    background: #FF0000;
+  }
+}
+
+@media(max-width: 992px) {
+  .form-wrapper {
+    width: 100%;
+    top: 88%;
+    right: 0;
+  }
+
+  .modal-dialog {
+    margin: 4.1rem auto;
+  }
+
+  .form-body {
+    justify-content: center;
+  }
+
+  .form-item {
+    margin-left: 13px;
+  }
+}
+
+@media(max-width: 480px) {
+  .modal-dialog {
+    margin: 0;
+  }
+
+  .form-title {
+    margin-top: 34px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .form-body {
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .form-item {
+    margin-left: 0;
+    width: 100%;
+
+  }
+
+  .form-btn {
+    width: 85%;
+  }
 }
