@@ -53,6 +53,7 @@ span.name_description {
 }
 
 section.main-section {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
@@ -60,6 +61,7 @@ section.main-section {
 
 .main-section_info {
   margin-top: 35px;
+
 }
 
 .main-section_title {

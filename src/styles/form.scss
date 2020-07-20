@@ -1,6 +1,8 @@
 .form-wrapper {
   width: 440px;
   position: absolute;
+  right: 80px;
+  top: 30%;
   background: #ffffff;
   border: 1px solid #000000;
   z-index: 1;
@@ -55,11 +57,98 @@ form {
 .form-body {
   display: flex;
   flex-flow: row wrap;
-  padding-left: 32px;
-  padding-right: 32px;
+  // padding-left: 32px;
+  // padding-right: 32px;
+  margin-top: 10px;
 }
 
 .form-item {
+  width: 172px;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #000000;
+  margin-left: 32px;
+  margin-top: 22px;
+
+  input {
+    border: none;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #000000;
+    outline: none;
+    padding-bottom: 10px;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 12px;
+      color: #F0F0F0;
+    }
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 10px;
+    color: #000000;
+  }
+
+}
+
+.importantly {
+  display: flex;
+
+  .star {
+    margin-left: 2px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #FF0000;
+  }
+}
+
+.form-btn {
+  width: 170px;
+  margin: 27px auto;
+
+  button {
+    width: 100%;
+    background: #FF0000;
+  }
+}
+
+@media(max-width: 992px) {
+  .form-wrapper {
+    width: 100%;
+    top: 88%;
+    right: 0;
+  }
+
+
+}
+
+@media(max-width: 480px) {
+  .form-title {
+    margin-top: 34px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .form-body {
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .form-item {
+    margin-left: 0;
+    width: 100%;
+
+  }
+
+  .form-btn {
+    width: 85%;
+  }
 }
