@@ -20,3 +20,49 @@
     margin-top: 80px;
   }
 }
+
+.human-text.hidden {
+  display: none
+}
+
+@media (max-width: 992px) {
+  .humans {
+    margin-top: 103px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: url("../images/line.png") 50% 83% no-repeat;
+  }
+
+  .human-text {
+    display: none;
+  }
+
+  .human-text.hidden {
+    display: block;
+  }
+
+  .humans_wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .human {
+    max-width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .human-text.hidden {
+    font-size: 18px;
+
+  }
+
+  .human-text p:not(:first-child) {
+    margin-top: 40px;
+  }
+}

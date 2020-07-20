@@ -90,3 +90,47 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .replace_wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hidden-agreement {
+    top: 26px;
+    width: 302px;
+    right: 9px;
+    left: inherit;
+  }
+
+  .replace-btns {
+    display: block;
+  }
+
+  .btn_wrapper {
+    margin-top: 20px;
+  }
+
+  .replace-btns .btn_wrapper:last-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .replace {
+    margin-top: 40px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .replace_title {
+    font-size: 24px;
+  }
+
+  .agreement-link {
+    font-size: 18px;
+  }
+}

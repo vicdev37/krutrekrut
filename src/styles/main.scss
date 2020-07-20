@@ -36,3 +36,11 @@ button {
   padding-left: 140px;
   padding-right: 140px;
 }
+
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

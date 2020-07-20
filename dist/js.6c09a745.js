@@ -19203,101 +19203,7 @@ var bodyScrollLock = require('body-scroll-lock');
 var disableBodyScroll = bodyScrollLock.disableBodyScroll;
 var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 window.$ = window.jQuery = jquery;
-$(document).ready(function () {
-  var menu = $('.menu')[0];
-
-  var getMenuHeight = function getMenuHeight() {
-    return menu.offsetHeight + 5;
-  };
-
-  var menuHeight = getMenuHeight();
-  var lastPageYOffset = pageYOffset;
-  var transform = 0;
-
-  var scrollHandler = function scrollHandler(evt) {
-    if (lastPageYOffset <= pageYOffset && pageYOffset > 600) {
-      if (transform <= menuHeight) {
-        transform = transform + (pageYOffset - lastPageYOffset);
-      } else {
-        transform = menuHeight;
-      }
-
-      menu.style.transform = "translateY(-".concat(transform, "px)");
-    } else if (lastPageYOffset >= pageYOffset) {
-      if (transform >= 0) {
-        transform = transform - (lastPageYOffset - pageYOffset);
-
-        if (transform < 0) {
-          transform = 0;
-        }
-      }
-
-      menu.style.transform = "translateY(-".concat(transform, "px)");
-    }
-
-    lastPageYOffset = pageYOffset;
-  };
-
-  window.addEventListener('scroll', scrollHandler);
-  window.addEventListener("resize", function () {
-    menuHeight = getMenuHeight();
-  }); // menu
-
-  var overlay = $('.overlay')[0];
-  $('.menu-btn').on('click', function (e) {
-    e.preventDefault();
-    $('body').toggleClass('menu-open');
-
-    if ($('body').hasClass("menu-open")) {
-      disableBodyScroll(overlay);
-    }
-  });
-  $('.overlay').on('click', function (e) {
-    $('body').toggleClass('menu-open');
-
-    if (!$('body').hasClass("menu-open")) {
-      enableBodyScroll(overlay);
-    }
-  }); // scroll to
-
-  var topOffset = 100;
-  $('.menu-link').each(function () {
-    var _this = this;
-
-    $(this).click(function () {
-      if (window.screen.width <= 690) {
-        enableBodyScroll(overlay);
-        $('body').toggleClass('menu-open');
-      }
-
-      $(document.body).animate({
-        'scrollTop': $($(_this).attr('href')).offset().top - topOffset
-      }, 500);
-    });
-  });
-  $('.keto-item').each(function () {
-    var _this2 = this;
-
-    $(this).click(function () {
-      $(document.body).animate({
-        'scrollTop': $('#' + $(_this2).data().scroll).offset().top - topOffset
-      }, 500);
-    });
-  });
-  $('.header-arrow__button').click(function () {
-    $(document.body).animate({
-      'scrollTop': $('#' + $(this).data().scroll).offset().top - topOffset
-    }, 500);
-  });
-
-  _aos.default.init({
-    offset: 200,
-    duration: 600,
-    easing: "ease-in",
-    delay: 100,
-    disable: "mobile"
-  });
-});
+$(document).ready(function () {});
 },{"jquery":"../node_modules/jquery/dist/jquery.js","body-scroll-lock":"../node_modules/body-scroll-lock/lib/bodyScrollLock.min.js","aos":"../node_modules/aos/dist/aos.js","babel-polyfill":"../node_modules/babel-polyfill/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -19326,7 +19232,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55390" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49484" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
