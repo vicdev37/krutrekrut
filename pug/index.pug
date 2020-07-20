@@ -41,39 +41,45 @@ block content
       .main-section_img
         img.logo(src="../src/images/ladder.svg" alt="лестница") 
 
-      
-      .form-wrapper
-        .close
-        form(action='')
-          .form-title
-            | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
-          .form-body
-            .form-item
-              label(for='item-name') 
-                | Имя
-              input.input-name(type='text' placeholder='Введите ваше имя')  
-            .form-item
-              label(for='item-contact') 
-                | Контакт
-              input.input-contact(type='text' placeholder='Введите контактные данные')  
-            .form-company
-              label(for='item-company') 
-                | Компания
-              input.input-company(type='text' placeholder='Название компании')  
-            .form-item
-              label(for='item-position') 
-                | Должность
-              input.input-position(type='text')  
-            .form-item
-              label(for='item-vacancy') 
-                | Ссылка на вакансию
-              input.input-vacancy(type='text')  
-            .form-item
-              label(for='item-name') 
-                | Ссылка на сайт
-              input.input-name(type='text' placeholder='Введите ваше имя') 
-          .form-btn
-            button(type="submit") отправить          
+      .modal
+        .modal-dialog
+          .modal-content
+            .form-wrapper
+              .close
+              form(action='')
+                .form-title
+                  | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
+                .form-body
+                  .form-item
+                    label.importantly(for='item-name') 
+                      | Имя
+                      .star *
+                    input.input-name(type='text' placeholder='Введите ваше имя')  
+                  .form-item
+                    label.importantly(for='item-contact') 
+                      | Контакт
+                      .star *  
+                    input.input-contact(type='text' placeholder='Введите контактные данные')  
+                  .form-item
+                    label.importantly(for='item-company') 
+                      | Компания
+                      .star *
+                    input.input-company(type='text' placeholder='Название компании')  
+                  .form-item
+                    label.importantly(for='item-position') 
+                      | Должность
+                      .star *
+                    input.input-position(type='text')  
+                  .form-item
+                    label(for='item-vacancy') 
+                      | Ссылка на вакансию
+                    input.input-vacancy(type='text')  
+                  .form-item
+                    label(for='item-name') 
+                      | Ссылка на сайт
+                    input.input-name(type='text' placeholder='Введите ваше имя') 
+                .form-btn
+                  button(type="submit") отправить          
 
   section.find-vacancy
     .container
