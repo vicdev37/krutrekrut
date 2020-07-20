@@ -41,6 +41,40 @@ block content
       .main-section_img
         img.logo(src="../src/images/ladder.svg" alt="лестница") 
 
+      
+      .form-wrapper
+        .close
+        form(action='')
+          .form-title
+            | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
+          .form-body
+            .form-item
+              label(for='item-name') 
+                | Имя
+              input.input-name(type='text' placeholder='Введите ваше имя')  
+            .form-item
+              label(for='item-contact') 
+                | Контакт
+              input.input-contact(type='text' placeholder='Введите контактные данные')  
+            .form-company
+              label(for='item-company') 
+                | Компания
+              input.input-company(type='text' placeholder='Название компании')  
+            .form-item
+              label(for='item-position') 
+                | Должность
+              input.input-position(type='text')  
+            .form-item
+              label(for='item-vacancy') 
+                | Ссылка на вакансию
+              input.input-vacancy(type='text')  
+            .form-item
+              label(for='item-name') 
+                | Ссылка на сайт
+              input.input-name(type='text' placeholder='Введите ваше имя') 
+          .form-btn
+            button(type="submit") отправить          
+
   section.find-vacancy
     .container
       .find-vacancy_title
@@ -210,7 +244,7 @@ block content
           .item_link
             a(href="#") facebook
           .item_text
-            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов. С нашими требованиями это просто фантастика!
+            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов.
         
         .feedback-item
           .item_logo
@@ -235,6 +269,8 @@ block content
   footer
     .footer_title
       | свяжитесь с нами
+      .footer-arrow
+        img.logo(src="../src/images/arrow.svg" alt="стрелка")
     .footer-contacts_wrapper
       .footer_mail
         a(href="mailto:vlad@webref.ru") krutrecruit@krutrecruit.com 

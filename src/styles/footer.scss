@@ -9,11 +9,17 @@ footer {
 }
 
 .footer_title {
+  display: flex;
+  align-items: center;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 32px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.footer-arrow {
+  margin-left: 106px;
 }
 
 .footer-contacts_wrapper {

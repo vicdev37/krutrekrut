@@ -10,6 +10,7 @@ header {
 
   a {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -51,7 +52,6 @@ span.name_description {
   }
 }
 
-
 section.main-section {
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,6 @@ section.main-section {
   margin-top: 35px;
 }
 
-
 .main-section_title {
   max-width: 762px;
   font-size: 40px;
@@ -72,7 +71,7 @@ section.main-section {
   margin-bottom: 102px;
 
   span {
-    color: #FF0000;
+    color: #ff0000;
   }
 }
 
@@ -106,11 +105,11 @@ section.main-section {
 }
 
 .btn-red {
-  background: #FF0000;
+  background: #ff0000;
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: -4px;
@@ -127,7 +126,7 @@ section.main-section {
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: -4px;
@@ -138,9 +137,7 @@ section.main-section {
   }
 }
 
-
 @media (max-width: 992px) {
-
   .main {
     padding-left: 16px;
     padding-right: 16px;
@@ -207,7 +204,6 @@ section.main-section {
   .header_contacts {
     width: 100%;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -217,13 +213,11 @@ section.main-section {
 
   .btn_wrapper {
     button {
-
       font-size: 15px;
     }
 
     .btn-black {
       margin-top: 28px;
     }
-
   }
 }
