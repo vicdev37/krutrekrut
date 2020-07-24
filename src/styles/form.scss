@@ -39,9 +39,9 @@
 
 .form-wrapper {
   display: none;
-  width: 440px;
+  width: 792px;
   position: absolute;
-  right: 80px;
+  right: -85px;
   top: 30%;
   background: #ffffff;
   border: 1px solid #000000;
@@ -88,48 +88,51 @@ form {
 
 .form-title {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  margin-top: 23px;
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 32px;
   text-align: center;
 }
 
 .form-body {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   // padding-left: 32px;
   // padding-right: 32px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .form-item {
-  width: 172px;
+  width: 266px;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #000000;
   margin-left: 32px;
-  margin-top: 22px;
+  margin-top: 24px;
 
   input {
     border: none;
-    margin-top: 12px;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 18px;
+    line-height: 18px;
     color: #000000;
     outline: none;
-    padding-bottom: 10px;
+    padding-left:12px;
+    border: 1px solid #000000;
+    height: 42px;
 
     &::placeholder {
-      font-size: 12px;
-      line-height: 12px;
+      font-size: 18px;
+      line-height: 18px;
       color: #F0F0F0;
     }
   }
 
   label {
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 16px;
+    line-height: 16px;
     color: #000000;
+    padding-left: 12px;
+    padding-bottom: 6px;
   }
 
 }
@@ -185,8 +188,8 @@ form {
     font-size: 18px;
     line-height: 140%;
     color: #000000;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .form-body {
@@ -198,8 +201,24 @@ form {
 
   .form-item {
     margin-left: 0;
+    margin-top: 16px;
     width: 100%;
 
+    input{
+      border-top:none;
+      border-right:none;
+      border-left:none;
+      font-size: 16px;
+      line-height: 16px;
+      padding-left: 0px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 0px;
+      padding-left:0px;
+    }
   }
 
   .form-btn {
