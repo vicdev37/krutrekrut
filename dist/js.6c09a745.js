@@ -19194,6 +19194,8 @@ var _aos = _interopRequireDefault(require("aos"));
 
 require("babel-polyfill");
 
+var _jquery = require("jquery");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var jquery = require("jquery");
@@ -19204,98 +19206,104 @@ var disableBodyScroll = bodyScrollLock.disableBodyScroll;
 var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 window.$ = window.jQuery = jquery;
 $(document).ready(function () {
-  var menu = $('.menu')[0];
+  $(".btn-red").each(function () {
+    $(this).on('click', function () {
+      $('.modal').addClass("open");
+      $('.form-wrapper').addClass("open");
+    });
+  });
+  $('.close').on('click', function () {
+    $('.form-wrapper').removeClass("open");
+    $('.modal').removeClass("open");
+  }); // postForm() {
+  //   this.isFormSending = true
+  // form
 
-  var getMenuHeight = function getMenuHeight() {
-    return menu.offsetHeight + 5;
-  };
+  $('#form').on('submit', function (event) {
+    event.preventDefault();
+    console.log('fsdfsd');
+    var name = $('#name').val().trim();
+    var contact = $('#contact').val().trim();
+    var company = $('#company').val().trim();
+    var position = $('#position').val().trim();
+    var vacancy = $('#vacancy').val().trim();
+    var site = $('#site').val().trim();
 
-  var menuHeight = getMenuHeight();
-  var lastPageYOffset = pageYOffset;
-  var transform = 0;
+    var createHtmlForEmail = function createHtmlForEmail() {
+      return "<div>\n          <div>\n            name: <b>".concat(name, "</b>\n          </div>\n          <div>\n            contact: <b>").concat(contact, "</b>\n          </div>\n          <div>\n            company: <b>").concat(company, "</b>\n          </div>\n          <div>\n            position: <b>").concat(position, "</b>\n          </div>\n          <div>\n            vacancy: <b>").concat(vacancy, "</b>\n          </div>\n          <div>\n            site: <b>").concat(site, "</b>\n          </div>\n        </div>");
+    };
 
-  var scrollHandler = function scrollHandler(evt) {
-    if (lastPageYOffset <= pageYOffset && pageYOffset > 600) {
-      if (transform <= menuHeight) {
-        transform = transform + (pageYOffset - lastPageYOffset);
-      } else {
-        transform = menuHeight;
-      }
+    if (name == '') {
+      $('#errorMassage').text("Введите имя");
+      return false;
+    } else if (contact == '') {
+      $('#errorMassage').text("Введите контактные данные");
+      return false;
+    } else if (company == '') {
+      $('#errorMassage').text("Введите название компании");
+      return false;
+    } else if (position == '') {
+      $('#errorMassage').text("Введите должность");
+      return false;
+    }
 
-      menu.style.transform = "translateY(-".concat(transform, "px)");
-    } else if (lastPageYOffset >= pageYOffset) {
-      if (transform >= 0) {
-        transform = transform - (lastPageYOffset - pageYOffset);
-
-        if (transform < 0) {
-          transform = 0;
+    $('#errorMassage').text('');
+    var letterData = {
+      to: 'justicejesus1237@gmail.com',
+      subject: 'contact form',
+      text: 'yo',
+      html: createHtmlForEmail()
+    };
+    $.ajax({
+      url: 'https://api.42.works/mailer',
+      type: 'POST',
+      cache: false,
+      // data: {
+      //   'name': name,
+      //   'contact': contact,
+      //   'company': company,
+      //   'position': position,
+      //   'vacancy': vacancy,
+      //   'site': site
+      // },
+      // dataType: 'html',
+      data: JSON.stringify(letterData),
+      beforeSend: function beforeSend() {
+        $('#sendForm').prop("disabled", true);
+      },
+      success: function success(data) {
+        if (!data) {
+          alert('Произошла ошибка');
+        } else {
+          $('#form').trigger("reset");
         }
-      }
 
-      menu.style.transform = "translateY(-".concat(transform, "px)");
-    }
+        $('#sendForm').prop("disabled", false);
+      },
+      contentType: "application/json; charset=utf-8" // body: JSON.stringify(letterData),
+      // headers: {
+      //   'Content-Type': 'application/json'
+      // },
 
-    lastPageYOffset = pageYOffset;
-  };
-
-  window.addEventListener('scroll', scrollHandler);
-  window.addEventListener("resize", function () {
-    menuHeight = getMenuHeight();
-  }); // menu
-
-  var overlay = $('.overlay')[0];
-  $('.menu-btn').on('click', function (e) {
-    e.preventDefault();
-    $('body').toggleClass('menu-open');
-
-    if ($('body').hasClass("menu-open")) {
-      disableBodyScroll(overlay);
-    }
-  });
-  $('.overlay').on('click', function (e) {
-    $('body').toggleClass('menu-open');
-
-    if (!$('body').hasClass("menu-open")) {
-      enableBodyScroll(overlay);
-    }
-  }); // scroll to
-
-  var topOffset = 100;
-  $('.menu-link').each(function () {
-    var _this = this;
-
-    $(this).click(function () {
-      if (window.screen.width <= 690) {
-        enableBodyScroll(overlay);
-        $('body').toggleClass('menu-open');
-      }
-
-      $(document.body).animate({
-        'scrollTop': $($(_this).attr('href')).offset().top - topOffset
-      }, 500);
-    });
-  });
-  $('.keto-item').each(function () {
-    var _this2 = this;
-
-    $(this).click(function () {
-      $(document.body).animate({
-        'scrollTop': $('#' + $(_this2).data().scroll).offset().top - topOffset
-      }, 500);
-    });
-  });
-  $('.header-arrow__button').click(function () {
-    $(document.body).animate({
-      'scrollTop': $('#' + $(this).data().scroll).offset().top - topOffset
-    }, 500);
-  });
-
-  _aos.default.init({
-    offset: 200,
-    duration: 600,
-    easing: "ease-in",
-    delay: 100,
-    disable: "mobile"
+    }); // fetch('https://api.42.works/mailer', {
+    //     method: 'POST',
+    //     body: JSON.stringify(letterData),
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     }
+    //   })
+    //   .then((response) => {
+    //     // console.log('response', response)
+    //     this.isFormSending = false
+    //     this.$emit('toggleModal', response.status)
+    //     this.clearForm()
+    //   })
+    //   .catch((err) => {
+    //     console.err('err', err)
+    //     this.isFormSending = false
+    //     this.$emit('toggleModal', response.status)
+    //     this.clearForm()
+    //   })
   });
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","body-scroll-lock":"../node_modules/body-scroll-lock/lib/bodyScrollLock.min.js","aos":"../node_modules/aos/dist/aos.js","babel-polyfill":"../node_modules/babel-polyfill/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -19326,7 +19334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49520" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

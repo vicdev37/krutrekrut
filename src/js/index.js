@@ -1,112 +1,144 @@
-var jquery = require("jquery");
-const bodyScrollLock = require('body-scroll-lock');
-const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-import aos from 'aos'
+  var jquery = require("jquery");
+  const bodyScrollLock = require('body-scroll-lock');
+  const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+  const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+  import aos from 'aos'
 
-window.$ = window.jQuery = jquery;
-import 'babel-polyfill';
+  window.$ = window.jQuery = jquery;
+  import 'babel-polyfill';
+  import {
+    each
+  } from 'jquery';
 
-$(document).ready(() => {
+  $(document).ready(() => {
+    $(".btn-red").each(function () {
+      $(this).on('click', function () {
+        $('.modal').addClass("open");
+        $('.form-wrapper').addClass("open");
+      })
+    })
+
+    $('.close').on('click', function () {
+      $('.form-wrapper').removeClass("open");
+      $('.modal').removeClass("open");
+    })
 
 
 
-  const menu = $('.menu')[0]
-  const getMenuHeight = () => {
-    return menu.offsetHeight + 5
-  }
+    // postForm() {
+    //   this.isFormSending = true
 
-  let menuHeight = getMenuHeight()
-  let lastPageYOffset = pageYOffset
-  let transform = 0
 
-  const scrollHandler = (evt) => {
 
-    if ((lastPageYOffset <= pageYOffset) && (pageYOffset > 600)) {
-      if (transform <= menuHeight) {
-        transform = transform + (pageYOffset - lastPageYOffset)
-      } else {
-        transform = menuHeight
+    // form
+
+    $('#form').on('submit', function (event) {
+      event.preventDefault()
+      console.log('fsdfsd');
+      let name = $('#name').val().trim();
+      let contact = $('#contact').val().trim();
+      let company = $('#company').val().trim();
+      let position = $('#position').val().trim();
+      let vacancy = $('#vacancy').val().trim();
+      let site = $('#site').val().trim();
+
+      const createHtmlForEmail = () => {
+        return `<div>
+          <div>
+            name: <b>${name}</b>
+          </div>
+          <div>
+            contact: <b>${contact}</b>
+          </div>
+          <div>
+            company: <b>${company}</b>
+          </div>
+          <div>
+            position: <b>${position}</b>
+          </div>
+          <div>
+            vacancy: <b>${vacancy}</b>
+          </div>
+          <div>
+            site: <b>${site}</b>
+          </div>
+        </div>`
       }
 
-      menu.style.transform = `translateY(-${transform}px)`
-    } else if (lastPageYOffset >= pageYOffset) {
-      if (transform >= 0) {
-        transform = transform - (lastPageYOffset - pageYOffset)
-
-        if (transform < 0) {
-          transform = 0
-        }
+      if (name == '') {
+        $('#errorMassage').text("Введите имя")
+        return false;
+      } else if (contact == '') {
+        $('#errorMassage').text("Введите контактные данные")
+        return false;
+      } else if (company == '') {
+        $('#errorMassage').text("Введите название компании")
+        return false;
+      } else if (position == '') {
+        $('#errorMassage').text("Введите должность")
+        return false;
       }
-      menu.style.transform = `translateY(-${transform}px)`
-    }
+      $('#errorMassage').text('')
 
-    lastPageYOffset = pageYOffset
-  }
-
-
-  window.addEventListener('scroll', scrollHandler)
-
-  window.addEventListener("resize", () => {
-    menuHeight = getMenuHeight()
-  })
-
-  // menu
-  const overlay = $('.overlay')[0]
+      const letterData = {
+        to: 'justicejesus1237@gmail.com',
+        subject: 'contact form',
+        text: 'yo',
+        html: createHtmlForEmail()
+      }
 
 
-  $('.menu-btn').on('click', function (e) {
-    e.preventDefault();
+      $.ajax({
+        url: 'https://api.42.works/mailer',
+        type: 'POST',
+        cache: false,
+        // data: {
+        //   'name': name,
+        //   'contact': contact,
+        //   'company': company,
+        //   'position': position,
+        //   'vacancy': vacancy,
+        //   'site': site
+        // },
+        // dataType: 'html',
+        data: JSON.stringify(letterData),
+        beforeSend: function () {
+          $('#sendForm').prop("disabled", true)
+        },
+        success: function (data) {
+          if (!data) {
+            alert('Произошла ошибка')
+          } else {
+            $('#form').trigger("reset")
+          }
+          $('#sendForm').prop("disabled", false)
+        },
+        contentType: "application/json; charset=utf-8",
+        // body: JSON.stringify(letterData),
+        // headers: {
+        //   'Content-Type': 'application/json'
+        // },
+      });
 
-    $('body').toggleClass('menu-open');
-    if ($('body').hasClass("menu-open")) {
-      disableBodyScroll(overlay);
-    }
+
+      // fetch('https://api.42.works/mailer', {
+      //     method: 'POST',
+      //     body: JSON.stringify(letterData),
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     }
+      //   })
+      //   .then((response) => {
+      //     // console.log('response', response)
+      //     this.isFormSending = false
+      //     this.$emit('toggleModal', response.status)
+      //     this.clearForm()
+      //   })
+      //   .catch((err) => {
+      //     console.err('err', err)
+      //     this.isFormSending = false
+      //     this.$emit('toggleModal', response.status)
+      //     this.clearForm()
+      //   })
+    });
   });
-
-  $('.overlay').on('click', function (e) {
-    $('body').toggleClass('menu-open');
-    if (!$('body').hasClass("menu-open")) {
-      enableBodyScroll(overlay);
-    }
-  })
-
-
-  // scroll to
-  let topOffset = 100
-
-  $('.menu-link').each(function () {
-    $(this).click(() => {
-      if (window.screen.width <= 690) {
-        enableBodyScroll(overlay);
-        $('body').toggleClass('menu-open');
-      }
-
-      $(document.body).animate({
-        'scrollTop': $($(this).attr('href')).offset().top - topOffset
-      }, 500);
-    })
-  })
-
-  $('.keto-item').each(function () {
-    $(this).click(() => {
-      $(document.body).animate({
-        'scrollTop': $('#' + $(this).data().scroll).offset().top - topOffset
-      }, 500);
-    })
-  })
-
-  $('.header-arrow__button').click(function () {
-    $(document.body).animate({
-      'scrollTop': $('#' + $(this).data().scroll).offset().top - topOffset
-    }, 500);
-  })
-
-  aos.init({
-    offset: 200,
-    duration: 600,
-    easing: "ease-in",
-    delay: 100,
-    disable: "mobile"
-  })
-});

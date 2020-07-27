@@ -41,6 +41,48 @@ block content
       .main-section_img
         img.logo(src="../src/images/ladder.svg" alt="лестница") 
 
+      .modal
+        .modal-dialog
+          .modal-content
+            .form-wrapper
+              .close
+              //- form(action='POST' name='candidate' data-netlify='true')
+              form(id="form")
+                .form-title
+                  | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
+                .form-body
+                  .form-item
+                    label.importantly(for='input-name') 
+                      | Имя
+                      .star *
+                    input.input-name(type='text' name='name' id="name" placeholder='Введите ваше имя')  
+                  .form-item
+                    label.importantly(for='input-contact') 
+                      | Контакт
+                      .star *  
+                    input.input-contact(type='text' name='contact' id="contact" placeholder='Введите контактные данные')  
+                  .form-item
+                    label.importantly(for='input-company') 
+                      | Компания
+                      .star *
+                    input.input-company(type='text' name='company' id="company" placeholder='Название компании')  
+                  .form-item
+                    label.importantly(for='input-position') 
+                      | Должность
+                      .star *
+                    input.input-position(type='text' name='position' id="position" placeholder='Название должности')  
+                  .form-item
+                    label(for='input-vacancy') 
+                      | Ссылка на вакансию
+                    input.input-vacancy(type='text' name='vacancy', id="vacancy")  
+                  .form-item
+                    label(for='input-site') 
+                      | Ссылка на сайт
+                    input.input-site(type='text' name='site', id="site") 
+                .form-btn
+                  button( id='sendForm') отправить 
+                  #errorMassage         
+
   section.find-vacancy
     .container
       .find-vacancy_title
@@ -210,7 +252,7 @@ block content
           .item_link
             a(href="#") facebook
           .item_text
-            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов. С нашими требованиями это просто фантастика!
+            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов.
         
         .feedback-item
           .item_logo
@@ -235,6 +277,8 @@ block content
   footer
     .footer_title
       | свяжитесь с нами
+      .footer-arrow
+        img.logo(src="../src/images/arrow.svg" alt="стрелка")
     .footer-contacts_wrapper
       .footer_mail
         a(href="mailto:vlad@webref.ru") krutrecruit@krutrecruit.com 
@@ -243,26 +287,3 @@ block content
           img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
         a(href='#')
           img.logo(src="../src/images/whatsapp.svg" alt="Вотсап")
-
-        
-
-
-            
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-    
-
