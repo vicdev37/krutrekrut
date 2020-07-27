@@ -81,7 +81,49 @@ block content
                     input.input-site(type='text' name='site', id="site") 
                 .form-btn
                   button( id='sendForm') отправить 
+                  #errorMassage     
+
+      .modal-2
+        .modal-dialog
+          .modal-content
+            .form-wrapper-2
+              .close
+              form(id="form2")
+                .form-title
+                  | УЗНАТЬ ТОЧНУЮ СТОИМОСТЬ И СРОКИ
+                .form-body
+                  .form-item
+                    label.importantly(for='input-name') 
+                      | Имя
+                      .star *
+                    input.input-name(type='text' name='name' id="name2" placeholder='Введите ваше имя')  
+                  .form-item
+                    label.importantly(for='input-contact') 
+                      | Контакт
+                      .star *  
+                    input.input-contact(type='text' name='contact' id="contact2" placeholder='Введите контактные данные')  
+                  .form-item
+                    label.importantly(for='input-company') 
+                      | Компания
+                      .star *
+                    input.input-company(type='text' name='company' id="company2" placeholder='Название компании')  
+                  .form-item
+                    label.importantly(for='input-position') 
+                      | Должность
+                      .star *
+                    input.input-position(type='text' name='position' id="position2" placeholder='Название должности')  
+                  .form-item
+                    label(for='input-vacancy') 
+                      | Ссылка на вакансию
+                    input.input-vacancy(type='text' name='vacancy', id="vacancy2")  
+                  .form-item
+                    label(for='input-site') 
+                      | Ссылка на сайт
+                    input.input-site(type='text' name='site', id="site2") 
+                .form-btn
+                  button( id='sendForm') отправить 
                   #errorMassage         
+                
 
   section.find-vacancy
     .container
@@ -235,7 +277,7 @@ block content
         .whatWeDoing_title
           | ЧЕМ МЫ ЗАНИМАЕМСЯ?
         .whatWeDoing_description
-          | Мы берем на себя процесс поиска кандидатов, тестируем и проверяем их компетенцию, назначаем и контролируем проведение всех этапов интервью и, в конечном итоге, согласовываем условия выхода специалиста к вам в проект.
+          | Мы берем на себя процесс поиска кандидатов, тестируем и проверяем их компетенцию, назначаем и контролируем проведение всех этапов интервью и, в конечном итоге, согласовываем условия выхода специалиста к вам в проект
 
   section.replace
     .replace_wrapper
@@ -248,7 +290,7 @@ block content
       .replace-text
         p 
           |  Условия прописываем в 
-        .agreement-link договоре.
+        .agreement-link договоре
           .hidden-agreement
             | 2.1.4. In the event of termination of the Contract between the Customer and the Candidate, which was concluded between the Parties and there is an Agreement confirming the employment of the Candidate within the Trial period established by the Customer (up to 6 (six) months), the Contractor undertakes to re-select the candidate for this vacancy once without charging additional fees if the Customer submits the relevant Application no later than 10 days from the date of termination of the Contract with the Candidate.
 
@@ -266,15 +308,15 @@ block content
 
   section.humans
     .human-text.hidden
-        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком.
-        p Мы постоянно учимся и работаем над улучшением методологии найма в IT.
+        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком
+        p Мы постоянно учимся и работаем над улучшением методологии найма в IT
         p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов 
     .humans_wrapper 
       .human
         img(src="../src/images/man.svg" alt="мужчина")
       .human-text
-        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком.
-        p Мы постоянно учимся и работаем над улучшением методологии найма в IT.
+        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком
+        p Мы постоянно учимся и работаем над улучшением методологии найма в IT
         p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов
       
       .human
@@ -303,7 +345,7 @@ block content
           .item_link
             a(href="#") facebook
           .item_text
-            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов.
+            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов
         
         .feedback-item
           .item_logo
@@ -313,7 +355,7 @@ block content
           .item_link
             a(href="#") linkedin
           .item_text
-            | Уже 2 года плодотворно сотрудничаем с командой krutrecruit, которая помогает находить даже редких специалистов в короткие сроки, что позволяет гибко масштабироваться нашему агенству под потребности клиентов.
+            | Уже 2 года плодотворно сотрудничаем с командой krutrecruit, которая помогает находить даже редких специалистов в короткие сроки, что позволяет гибко масштабироваться нашему агенству под потребности клиентов
 
         .feedback-item
           .item_logo
@@ -323,7 +365,7 @@ block content
           .item_link
             a(href="#") linkedin
           .item_text
-            | Крутрекрут гибкие ребята, которые умеют хорошо считывать потребность заказчика, и  предоставляют выборку из релевантных резюме. Это помогает быстро и эффективно нанимать лучших разработчиков.
+            | Крутрекрут гибкие ребята, которые умеют хорошо считывать потребность заказчика, и  предоставляют выборку из релевантных резюме. Это помогает быстро и эффективно нанимать лучших разработчиков
 
   footer
     .footer_title
