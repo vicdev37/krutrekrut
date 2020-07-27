@@ -46,7 +46,8 @@ block content
           .modal-content
             .form-wrapper
               .close
-              form(action='POST' name='candidate' data-netlify='true')
+              //- form(action='POST' name='candidate' data-netlify='true')
+              form(id="form")
                 .form-title
                   | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
                 .form-body
@@ -54,32 +55,33 @@ block content
                     label.importantly(for='input-name') 
                       | Имя
                       .star *
-                    input.input-name(type='text' name='name' placeholder='Введите ваше имя')  
+                    input.input-name(type='text' name='name' id="name" placeholder='Введите ваше имя')  
                   .form-item
                     label.importantly(for='input-contact') 
                       | Контакт
                       .star *  
-                    input.input-contact(type='text' name='contact' placeholder='Введите контактные данные')  
+                    input.input-contact(type='text' name='contact' id="contact" placeholder='Введите контактные данные')  
                   .form-item
                     label.importantly(for='input-company') 
                       | Компания
                       .star *
-                    input.input-company(type='text' name='company' placeholder='Название компании')  
+                    input.input-company(type='text' name='company' id="company" placeholder='Название компании')  
                   .form-item
                     label.importantly(for='input-position') 
                       | Должность
                       .star *
-                    input.input-position(type='text' name='position' placeholder='Название должности')  
+                    input.input-position(type='text' name='position' id="position" placeholder='Название должности')  
                   .form-item
                     label(for='input-vacancy') 
                       | Ссылка на вакансию
-                    input.input-vacancy(type='text' name='vacancy')  
+                    input.input-vacancy(type='text' name='vacancy', id="vacancy")  
                   .form-item
                     label(for='input-site') 
                       | Ссылка на сайт
-                    input.input-site(type='text' name='site') 
+                    input.input-site(type='text' name='site', id="site") 
                 .form-btn
-                  button(type="submit") отправить          
+                  button( id='sendForm') отправить 
+                  #errorMassage         
 
   section.find-vacancy
     .container
@@ -285,26 +287,3 @@ block content
           img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
         a(href='#')
           img.logo(src="../src/images/whatsapp.svg" alt="Вотсап")
-
-        
-
-
-            
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-    
-
