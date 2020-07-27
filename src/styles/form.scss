@@ -116,7 +116,7 @@ form {
     line-height: 18px;
     color: #000000;
     outline: none;
-    padding-left:12px;
+    padding-left: 12px;
     border: 1px solid #000000;
     height: 42px;
 
@@ -156,6 +156,13 @@ form {
     width: 100%;
     background: #FF0000;
   }
+
+
+}
+
+#errorMassage {
+  text-align: center;
+  margin-top: 5px;
 }
 
 @media(max-width: 992px) {
@@ -204,10 +211,10 @@ form {
     margin-top: 16px;
     width: 100%;
 
-    input{
-      border-top:none;
-      border-right:none;
-      border-left:none;
+    input {
+      border-top: none;
+      border-right: none;
+      border-left: none;
       font-size: 16px;
       line-height: 16px;
       padding-left: 0px;
@@ -217,7 +224,7 @@ form {
       font-size: 14px;
       line-height: 14px;
       padding-bottom: 0px;
-      padding-left:0px;
+      padding-left: 0px;
     }
   }
 
