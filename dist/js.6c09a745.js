@@ -19215,6 +19215,13 @@ $(document).ready(function () {
   $('.close').on('click', function () {
     $('.form-wrapper').removeClass("open");
     $('.modal').removeClass("open");
+  });
+  $(document).mouseup(function (e) {
+    var block = $(".form-wrapper");
+
+    if (!block.is(e.target) && block.has(e.target).length === 0) {
+      $('.modal').removeClass("open");
+    }
   }); // postForm() {
   //   this.isFormSending = true
   // form
@@ -19334,7 +19341,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63919" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49321" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
