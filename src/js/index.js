@@ -23,6 +23,14 @@
       $('.modal').removeClass("open");
     })
 
+    $(document).mouseup(function (e) {
+      let block = $(".form-wrapper");
+      if (!block.is(e.target) &&
+        block.has(e.target).length === 0) {
+        $('.modal').removeClass("open");
+      }
+    });
+
 
 
     // postForm() {
