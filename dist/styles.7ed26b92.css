@@ -425,7 +425,8 @@ button {
   display: block !important;
 }
 
-.modal {
+.modal,
+.modal-2 {
   display: none;
   position: relative;
   z-index: 1050;
@@ -460,7 +461,8 @@ button {
   border-radius: 4px;
 }
 
-.form-wrapper {
+.form-wrapper,
+.form-wrapper-2 {
   display: none;
   width: 792px;
   position: absolute;
@@ -471,7 +473,7 @@ button {
   z-index: 1;
 }
 
-form {
+.form-wrapper-2 form {
   position: relative;
 }
 
