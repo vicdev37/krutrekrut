@@ -19241,16 +19241,11 @@ $(document).ready(function () {
 
   $('#form').on('submit', function (event) {
     event.preventDefault();
-    console.log('fsdfsd');
     var name = $('#name').val().trim();
     var contact = $('#contact').val().trim();
-    var company = $('#company').val().trim();
-    var position = $('#position').val().trim();
-    var vacancy = $('#vacancy').val().trim();
-    var site = $('#site').val().trim();
 
     var createHtmlForEmail = function createHtmlForEmail() {
-      return "<div>\n          <div>\n            name: <b>".concat(name, "</b>\n          </div>\n          <div>\n            contact: <b>").concat(contact, "</b>\n          </div>\n          <div>\n            company: <b>").concat(company, "</b>\n          </div>\n          <div>\n            position: <b>").concat(position, "</b>\n          </div>\n          <div>\n            vacancy: <b>").concat(vacancy, "</b>\n          </div>\n          <div>\n            site: <b>").concat(site, "</b>\n          </div>\n        </div>");
+      return "<div>\n          <div>\n            name: <b>".concat(name, "</b>\n          </div>\n          <div>\n            phone: <b>").concat(contact, "</b>\n          </div>\n        </div>");
     };
 
     if (name == '') {
@@ -19259,17 +19254,12 @@ $(document).ready(function () {
     } else if (contact == '') {
       $('#errorMassage').text("Введите контактные данные");
       return false;
-    } else if (company == '') {
-      $('#errorMassage').text("Введите название компании");
-      return false;
-    } else if (position == '') {
-      $('#errorMassage').text("Введите должность");
-      return false;
     }
 
     $('#errorMassage').text('');
     var letterData = {
       to: 'krutrecruit@krutrecruit.com',
+      // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Бесплатно получить кандидата заполнена"',
       text: 'yo',
       html: createHtmlForEmail()
@@ -19296,16 +19286,11 @@ $(document).ready(function () {
   });
   $('#form2').on('submit', function (event) {
     event.preventDefault();
-    console.log('fsdfsd');
     var name2 = $('#name2').val().trim();
     var contact2 = $('#contact2').val().trim();
-    var company2 = $('#company2').val().trim();
-    var position2 = $('#position2').val().trim();
-    var vacancy2 = $('#vacancy2').val().trim();
-    var site2 = $('#site2').val().trim();
 
     var createHtmlForEmail2 = function createHtmlForEmail2() {
-      return "<div>\n          <div>\n            name: <b>".concat(name2, "</b>\n          </div>\n          <div>\n            contact: <b>").concat(contact2, "</b>\n          </div>\n          <div>\n            company: <b>").concat(company2, "</b>\n          </div>\n          <div>\n            position: <b>").concat(position2, "</b>\n          </div>\n          <div>\n            vacancy: <b>").concat(vacancy2, "</b>\n          </div>\n          <div>\n            site: <b>").concat(site2, "</b>\n          </div>\n        </div>");
+      return "<div>\n          <div>\n            name: <b>".concat(name2, "</b>\n          </div>\n          <div>\n            phone: <b>").concat(contact2, "</b>\n          </div>\n        </div>");
     };
 
     if (name2 == '') {
@@ -19314,17 +19299,12 @@ $(document).ready(function () {
     } else if (contact2 == '') {
       $('#errorMassage').text("Введите контактные данные");
       return false;
-    } else if (company2 == '') {
-      $('#errorMassage').text("Введите название компании");
-      return false;
-    } else if (position2 == '') {
-      $('#errorMassage').text("Введите должность");
-      return false;
     }
 
     $('#errorMassage').text('');
     var letterData = {
       to: 'krutrecruit@krutrecruit.com',
+      // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Узнать точную стоимость и сроки заполнена"',
       text: 'yo',
       html: createHtmlForEmail2()
@@ -19378,7 +19358,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54397" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50126" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
