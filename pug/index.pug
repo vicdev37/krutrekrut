@@ -2,6 +2,9 @@ extends layout/layout.pug
 
 
 block content
+  a(href="eng.pug" class='language-link')
+    //- img(scr="../src/images/united-kingdom.png" alt="eng")
+    | eng
   .main
     header
       .header_logo__wrapper
@@ -14,6 +17,7 @@ block content
               span.name_description
                 | FULLSTACK IT RECRUITMENT AGENCY
       .header_contacts
+        
         span 
           |  свяжитесь с нами  
         .header_socials
@@ -23,6 +27,7 @@ block content
             img.logo(src="../src/images/whatsapp.svg" alt='Написать в Whatsapp')  
 
     section.main-section
+      
       .main-section_info
         .main-section_title
           | Найдем IT и digital-специалистов <span>мечты</span> за 5 недель с гарантией результата

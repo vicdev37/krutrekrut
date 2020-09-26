@@ -2,6 +2,8 @@ extends layout/layout.pug
 
 
 block content
+  a(href="index.pug" class='language-link')
+    | ru
   .main
     header
       .header_logo__wrapper
@@ -15,31 +17,31 @@ block content
                 | FULLSTACK IT RECRUITMENT AGENCY
       .header_contacts
         span 
-          |  свяжитесь с нами  
+          |  contact us 
         .header_socials
           a(title='Telegram' href='https://telegram.me/krutrecruit' target='_blank')
-            img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
+            img.logo(src="../src/images/telegram.svg" alt="Telegram") 
           a(title='Whatsapp' href='whatsapp://send?phone=79515337669')
-            img.logo(src="../src/images/whatsapp.svg" alt='Написать в Whatsapp')  
+            img.logo(src="../src/images/whatsapp.svg" alt='Write to Whatsapp')  
 
     section.main-section
       .main-section_info
         .main-section_title
           | We will find you IT and digital specialists of your <span>dreams</span> just in 5 weeks with a guaranteed result
         .main-section_img.hidden
-          img(src="../src/images/ladder.svg" alt="лестница")   
+          img(src="../src/images/ladder.svg" alt="stairs")   
         .btn_wrapper
           button.btn-red  
-            | бесплатно получить первого кандидата 
+            | get your first candidate for free 
           span
-            |  в течение 24-х часов   
+            |  within 24 hours   
         .btn_wrapper
           button.btn-black  
-            | узнать точную стоимость и сроки
+            | find out the exact cost and terms
           span
-            |  на вашу позицию
+            |  to your position
       .main-section_img
-        img.logo(src="../src/images/ladder.svg" alt="лестница") 
+        img.logo(src="../src/images/ladder.svg" alt="stairs") 
 
       .modal
         .modal-dialog
@@ -49,20 +51,20 @@ block content
               //- form(action='POST' name='candidate' data-netlify='true')
               form(id="form")
                 .form-title
-                  | БЕСПЛАТНО ПОЛУЧИТЬ ПЕРВОГО КАНДИДАТА
+                  | GET YOUR FIRST CANDIDATE FOR FREE
                 .form-body
                   .form-item
                     label.importantly(for='input-name') 
-                      | Имя
+                      | Name
                       .star *
-                    input.input-name(type='text' name='name' id="name" placeholder='Введите ваше имя')  
+                    input.input-name(type='text' name='name' id="name" placeholder='Enter your name')  
                   .form-item
                     label.importantly(for='input-contact') 
-                      | Телефон
+                      | Phone
                       .star *  
-                    input.input-contact(type='text' name='contact' id="contact" placeholder='Введите ваш номер телефона')  
+                    input.input-contact(type='text' name='contact' id="contact" placeholder='Enter your phone number')  
                 .form-btn
-                  button( id='sendForm') отправить 
+                  button( id='sendForm') send
                   #errorMassage     
 
       .modal-2
@@ -72,29 +74,30 @@ block content
               .close
               form(id="form2")
                 .form-title
-                  | УЗНАТЬ ТОЧНУЮ СТОИМОСТЬ И СРОКИ
+                  | FIND OUT THE EXACT COST AND TERMS
+
                 .form-body
                   .form-item
                     label.importantly(for='input-name') 
-                      | Имя
+                      | Name
                       .star *
-                    input.input-name(type='text' name='name' id="name2" placeholder='Введите ваше имя')  
+                    input.input-name(type='text' name='name' id="name2" placeholder='Enter your name')  
                   .form-item
                     label.importantly(for='input-contact') 
-                      | Телефон
+                      | Phone
                       .star *  
-                    input.input-contact(type='text' name='contact' id="contact2" placeholder='Введите ваш номер телефона')   
+                    input.input-contact(type='text' name='contact' id="contact2" placeholder='Enter your phone number')   
                 .form-btn
-                  button( id='sendForm') отправить 
+                  button( id='sendForm') send 
                   #errorMassage         
                 
 
   section.find-vacancy
     .container
       .find-vacancy_title
-        | Работаем с вакансиями любой сложности    
+        | We are able to work with any vacancy you have.   
       .find-vacancy_subtitle
-        | Кого мы можем найти?
+        | Who can we find?
       .accordeon
         ul
           li
@@ -239,110 +242,107 @@ block content
     .container
       .whatWeDoing_wrapper
         .whatWeDoing_title
-          | ЧЕМ МЫ ЗАНИМАЕМСЯ?
+          | WHAT ARE WE DOING?
+
         .whatWeDoing_description
-          | Мы берем на себя процесс поиска кандидатов, тестируем и проверяем их компетенцию, назначаем и контролируем проведение всех этапов интервью и, в конечном итоге, согласовываем условия выхода специалиста к вам в проект
+          | We take over the whole recruitment process: we are testing their skills and their competence, assigning and ensuring all stages of the interview and, ultimately, agreeing on conditions for a specialist to join your project.
 
   section.replace
     .replace_wrapper
       .replace_title
-        | бесплатно найдем замену
-      
+        | WE WILL FIND A CANDIDATE REPLACEMENT FOR FREE
       
       p
-        | В течение 3-х месяцев, если сотрудник вам не подойдет или сам уволится.  
+        | Within 3 months, if the employee does not suit you or he will quit. 
       .replace-text
         p 
-          |  Условия прописываем в 
-        .agreement-link договоре
+          |  These conditions are set out in the
+        .agreement-link contract
           .hidden-agreement
             | 2.1.4. In the event of termination of the Contract between the Customer and the Candidate, which was concluded between the Parties and there is an Agreement confirming the employment of the Candidate within the Trial period established by the Customer (up to 6 (six) months), the Contractor undertakes to re-select the candidate for this vacancy once without charging additional fees if the Customer submits the relevant Application no later than 10 days from the date of termination of the Contract with the Candidate.
 
       .replace-btns
         .btn_wrapper
           button.btn-red  
-            | бесплатно получить первого кандидата 
+            | get your first candidate for free 
           span
-            |  в течение 24-х часов   
+            |  within 24 hours  
         .btn_wrapper
           button.btn-black  
-            | узнать точную стоимость и сроки
+            | find out the exact cost and terms
           span
-            |  на вашу позицию  
+            |  to your position  
 
   section.humans
     .human-text.hidden
-        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком
-        p Мы постоянно учимся и работаем над улучшением методологии найма в IT
-        p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов 
+        p We achieve results due to clear navigation in the flow of human resources. We  quickly integrate into your processes, help to significantly strengthen internal IT recruitment or build it from scratch
+        p We are constantly learning and working to improve the recruitment methodology in IT
+        p We work with strong recruiters with relevant experience in IT market from all the continents.
     .humans_wrapper 
       .human
-        img(src="../src/images/man.svg" alt="мужчина")
+        img(src="../src/images/man.svg" alt="man")
       .human-text
-        p Легкость результата достигается за счет четкой навигации в потоке человеческих ресурсов - мы быстро встроимся в ваши процессы, поможем существенно усилить внутренний IT рекрутмент или выстроить его целиком
-        p Мы постоянно учимся и работаем над улучшением методологии найма в IT
-        p С нами сотрудничают крутые IT рекрутеры с опытом на рынках всех континентов
+        p We achieve results due to clear navigation in the flow of human resources. We  quickly integrate into your processes, help to significantly strengthen internal IT recruitment or build it from scratch
+        p We are constantly learning and working to improve the recruitment methodology in IT
+        p We work with strong recruiters with relevant experience in IT market from all the continents.
       
       .human
-        img(src="../src/images/woman.svg" alt="женщина")    
+        img(src="../src/images/woman.svg" alt="woman")    
 
   section.feedback
     .container
       .feedback_title
-        | прочтите отзывы
+        | READ REVIEWS
       .feedback-items_wrapper
         .feedback-item
           .item_logo
-            img(src="../src/images/yandex.svg" alt="яндекс")
+            img(src="../src/images/yandex.svg" alt="yandex")
           .item_name
-            | Анастасия кириллова 
+            | Anastasia Kirillova
           .item_link
             a(href="https://www.linkedin.com/in/anastasia-kirillova-14410292/" target="_blank") linkedin
           .item_text
-            | Так приятно, когда твой запрос понимают с полуслова и очень быстро приводят нужных специалистов, да еще и такого высокого уровня. С нашими требованиями это просто фантастика! Спасибо Вике и ее команде  
-  
+            | It is so nice when someone really understands your needs and you get specialists even at such a high level. Our requirements were met, this was just fantastic! Thanks to Vika and her team.
         .feedback-item
           .item_logo
-            img(src="../src/images/sd.svg" alt="яндекс")
+            img(src="../src/images/sd.svg" alt="sd")
           .item_name
-            | Анастасия крестьянникова
+            | Anastasia Krestyanikova 
           .item_link
             a(href="https://www.facebook.com/anastasia.krestyanikova" target="_blank") facebook
           .item_text
-            | Искали такого редкого профессионала, как консультант SAP EWM. КрутРекрут представили нам более 10 специалистов высочайшего уровня и с достаточно широкой вилкой зарплатных ожиданий. Благодаря КрутРекруту, мы уже 8й месяц успешно работаем с одним из кандидатов
-        
+            | We were looking for SAP EWM consultant. And let me tell you, this is RARE. Krutrekruit team introduced us to more than 10 specialists of the highest professional level and with a fairly wide range of salary expectations. We have been successfully working with one of the candidates for more than 8 months now.
         .feedback-item
           .item_logo
-            img(src="../src/images/42.svg" alt="яндекс")
+            img(src="../src/images/42.svg" alt="42")
           .item_name
-            | Борис адимов
+            | Boris Adimov
           .item_link
             a(href="https://www.linkedin.com/in/boris-adimov-176269105/" target="_blank") linkedin
           .item_text
-            | Уже 2 года плодотворно сотрудничаем с командой krutrecruit, которая помогает находить даже редких специалистов в короткие сроки, что позволяет гибко масштабироваться нашему агенству под потребности клиентов
-
+            | For 2 years now, we have been cooperating with  Krutrecruit team, which helps to find even rare specialists in a short period of time, so that our agency can flexibly scale to the needs of our clients.
         .feedback-item
           .item_logo
-            img(src="../src/images/alfa.svg" alt="яндекс")
+            img(src="../src/images/alfa.svg" alt="alfa")
           .item_name
-            | елена демченко
+            | Elena Demchenko
           .item_link
             a(href="https://www.linkedin.com/in/elena-demchenko-47263a14a/" target="_blank") linkedin
           .item_text
-            | Крутрекрут гибкие ребята, которые умеют хорошо считывать потребность заказчика, и  предоставляют выборку из релевантных резюме. Это помогает быстро и эффективно нанимать лучших разработчиков
+            | Krutrecruit knows how to truly understand customer's needs and provide a selection of relevant CVs. This helps you hire one of the best developers with no time wasted.
 
   footer
     .footer_title
-      | свяжитесь с нами
+      | contact us
       .footer-arrow
-        img.logo(src="../src/images/arrow.svg" alt="стрелка")
+        img.logo(src="../src/images/arrow.svg" alt="arrow")
     .footer-contacts_wrapper
       .footer_mail
         a(href="mailto:vlad@webref.ru") krutrecruit@krutrecruit.com 
       .footer_socials
         a(title='Telegram' href='https://telegram.me/krutrecruit' target='_blank')
-            img.logo(src="../src/images/telegram.svg" alt="Телеграм") 
+            img.logo(src="../src/images/telegram.svg" alt="teledram") 
         a(title='Whatsapp' href='whatsapp://send?phone=79515337669')
-          img.logo(src="../src/images/whatsapp.svg" alt='Написать в Whatsapp')  
+          img.logo(src="../src/images/whatsapp.svg" alt='write to WhatsApp')  
 
           
