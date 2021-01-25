@@ -76,7 +76,7 @@
       $('#errorMassage').text('')
 
       const letterData = {
-        to: 'krutrecruit@krutrecruit.com',
+        to: 'strelkov@krutrecruit.com',
         // to: 'justicejesus1237@gmail.com',
         subject: 'Форма "Бесплатно получить кандидата заполнена"',
         text: 'yo',
@@ -131,7 +131,7 @@
       $('#errorMassage').text('')
 
       const letterData = {
-        to: 'krutrecruit@krutrecruit.com',
+        to: 'strelkov@krutrecruit.com',
         // to: 'justicejesus1237@gmail.com',
         subject: 'Форма "Узнать точную стоимость и сроки заполнена"',
         text: 'yo',

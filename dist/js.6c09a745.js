@@ -19258,7 +19258,7 @@ $(document).ready(function () {
 
     $('#errorMassage').text('');
     var letterData = {
-      to: 'krutrecruit@krutrecruit.com',
+      to: 'strelkov@krutrecruit.com',
       // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Бесплатно получить кандидата заполнена"',
       text: 'yo',
@@ -19303,7 +19303,7 @@ $(document).ready(function () {
 
     $('#errorMassage').text('');
     var letterData = {
-      to: 'krutrecruit@krutrecruit.com',
+      to: 'strelkov@krutrecruit.com',
       // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Узнать точную стоимость и сроки заполнена"',
       text: 'yo',
@@ -19358,7 +19358,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55221" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50518" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
