@@ -90,6 +90,7 @@ $(document).ready(() => {
         if (!data) {
           alert("Произошла ошибка");
         } else {
+          ym(86638130, "reachGoal", "Formsubmitted");
           $("#form").trigger("reset");
         }
         $("#sendForm").prop("disabled", false);
@@ -143,6 +144,7 @@ $(document).ready(() => {
         if (!data) {
           alert("Произошла ошибка");
         } else {
+          ym(86638130, "reachGoal", "Formsubmitted");
           $("#form2").trigger("reset");
         }
         $("#sendForm").prop("disabled", false);
