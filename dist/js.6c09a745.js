@@ -19200,131 +19200,131 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var jquery = require("jquery");
 
-var bodyScrollLock = require('body-scroll-lock');
+var bodyScrollLock = require("body-scroll-lock");
 
 var disableBodyScroll = bodyScrollLock.disableBodyScroll;
 var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 window.$ = window.jQuery = jquery;
 $(document).ready(function () {
   $(".btn-red").each(function () {
-    $(this).on('click', function () {
-      $('.modal').addClass("open");
-      $('.form-wrapper').addClass("open");
+    $(this).on("click", function () {
+      $(".modal").addClass("open");
+      $(".form-wrapper").addClass("open");
     });
   });
-  $('.close').on('click', function () {
-    $('.form-wrapper').removeClass("open");
-    $('.modal').removeClass("open");
+  $(".close").on("click", function () {
+    $(".form-wrapper").removeClass("open");
+    $(".modal").removeClass("open");
   });
   $(".btn-black").each(function () {
-    $(this).on('click', function () {
-      $('.modal-2').addClass("open");
-      $('.form-wrapper-2').addClass("open");
+    $(this).on("click", function () {
+      $(".modal-2").addClass("open");
+      $(".form-wrapper-2").addClass("open");
     });
   });
-  $('.close').on('click', function () {
-    $('.form-wrapper-2').removeClass("open");
-    $('.modal-2').removeClass("open");
+  $(".close").on("click", function () {
+    $(".form-wrapper-2").removeClass("open");
+    $(".modal-2").removeClass("open");
   });
   $(document).mouseup(function (e) {
     var block = $(".form-wrapper");
     var block2 = $(".form-wrapper-2");
 
     if (!block.is(e.target) && block.has(e.target).length === 0) {
-      $('.modal').removeClass("open");
+      $(".modal").removeClass("open");
     }
 
     if (!block2.is(e.target) && block2.has(e.target).length === 0) {
-      $('.modal-2').removeClass("open");
+      $(".modal-2").removeClass("open");
     }
   }); // form
 
-  $('#form').on('submit', function (event) {
+  $("#form").on("submit", function (event) {
     event.preventDefault();
-    var name = $('#name').val().trim();
-    var contact = $('#contact').val().trim();
+    var name = $("#name").val().trim();
+    var contact = $("#contact").val().trim();
 
     var createHtmlForEmail = function createHtmlForEmail() {
       return "<div>\n          <div>\n            name: <b>".concat(name, "</b>\n          </div>\n          <div>\n            phone: <b>").concat(contact, "</b>\n          </div>\n        </div>");
     };
 
-    if (name == '') {
-      $('#errorMassage').text("Введите имя");
+    if (name == "") {
+      $("#errorMassage").text("Введите имя");
       return false;
-    } else if (contact == '') {
-      $('#errorMassage').text("Введите контактные данные");
+    } else if (contact == "") {
+      $("#errorMassage").text("Введите контактные данные");
       return false;
     }
 
-    $('#errorMassage').text('');
+    $("#errorMassage").text("");
     var letterData = {
-      to: 'krutrecruit@krutrecruit.com',
+      to: "sl@krutrecruit.com",
       // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Бесплатно получить кандидата заполнена"',
-      text: 'yo',
+      text: "yo",
       html: createHtmlForEmail()
     };
     $.ajax({
-      url: 'https://api.42.works/mailer',
-      type: 'POST',
+      url: "https://api.42.works/mailer",
+      type: "POST",
       cache: false,
       data: JSON.stringify(letterData),
       beforeSend: function beforeSend() {
-        $('#sendForm').prop("disabled", true);
+        $("#sendForm").prop("disabled", true);
       },
       success: function success(data) {
         if (!data) {
-          alert('Произошла ошибка');
+          alert("Произошла ошибка");
         } else {
-          $('#form').trigger("reset");
+          $("#form").trigger("reset");
         }
 
-        $('#sendForm').prop("disabled", false);
+        $("#sendForm").prop("disabled", false);
       },
       contentType: "application/json; charset=utf-8"
     });
   });
-  $('#form2').on('submit', function (event) {
+  $("#form2").on("submit", function (event) {
     event.preventDefault();
-    var name2 = $('#name2').val().trim();
-    var contact2 = $('#contact2').val().trim();
+    var name2 = $("#name2").val().trim();
+    var contact2 = $("#contact2").val().trim();
 
     var createHtmlForEmail2 = function createHtmlForEmail2() {
       return "<div>\n          <div>\n            name: <b>".concat(name2, "</b>\n          </div>\n          <div>\n            phone: <b>").concat(contact2, "</b>\n          </div>\n        </div>");
     };
 
-    if (name2 == '') {
-      $('#errorMassage').text("Введите имя");
+    if (name2 == "") {
+      $("#errorMassage").text("Введите имя");
       return false;
-    } else if (contact2 == '') {
-      $('#errorMassage').text("Введите контактные данные");
+    } else if (contact2 == "") {
+      $("#errorMassage").text("Введите контактные данные");
       return false;
     }
 
-    $('#errorMassage').text('');
+    $("#errorMassage").text("");
     var letterData = {
-      to: 'krutrecruit@krutrecruit.com',
+      to: "sl@krutrecruit.com",
       // to: 'justicejesus1237@gmail.com',
       subject: 'Форма "Узнать точную стоимость и сроки заполнена"',
-      text: 'yo',
+      text: "yo",
       html: createHtmlForEmail2()
     };
     $.ajax({
-      url: 'https://api.42.works/mailer',
-      type: 'POST',
+      url: "https://api.42.works/mailer",
+      type: "POST",
       cache: false,
       data: JSON.stringify(letterData),
       beforeSend: function beforeSend() {
-        $('#sendForm').prop("disabled", true);
+        $("#sendForm").prop("disabled", true);
       },
       success: function success(data) {
         if (!data) {
-          alert('Произошла ошибка');
+          alert("Произошла ошибка");
         } else {
-          $('#form2').trigger("reset");
+          $("#form2").trigger("reset");
         }
 
-        $('#sendForm').prop("disabled", false);
+        $("#sendForm").prop("disabled", false);
       },
       contentType: "application/json; charset=utf-8"
     });
@@ -19358,7 +19358,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56454" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51261" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
