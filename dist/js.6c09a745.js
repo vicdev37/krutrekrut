@@ -19276,6 +19276,7 @@ $(document).ready(function () {
         if (!data) {
           alert("Произошла ошибка");
         } else {
+          ym(86638130, "reachGoal", "Formsubmitted");
           $("#form").trigger("reset");
         }
 
@@ -19321,6 +19322,7 @@ $(document).ready(function () {
         if (!data) {
           alert("Произошла ошибка");
         } else {
+          ym(86638130, "reachGoal", "Formsubmitted");
           $("#form2").trigger("reset");
         }
 
@@ -19358,7 +19360,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51261" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55023" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
